@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Document  
+        style 
+            include ../profileLooker.css 
+
+        div(class="header")
+            a(href="/profilePage") Home 
+            |
+            |
+            a(href="/logined_in_user_page") Feed
+            |
+            |
+            a(href = "/addWorkShop") Add WorkShop
+            |
+            |
+            a(href = "/addArt") Add Art
+            |
+            |
+            //- a(href="/notifactionPage") Notifications
+            a(href="/",class = "logout") logout
+                
+           
+
+
+    body#body
+       
+        
+        div.column.middle
+            div#down
+                form(method = "GET", action = "/addWork")   
+                    p Title: 
+                        input(type="text", name="Title", placeholder = "Title",value = "", id = "Title")
+                    br
+                    p Date:
+                        input(type="text", name="Date", placeholder = "2003",value = "", id = "Date")  
+                    br
+                    p Name: 
+                        input(type="text", name="Name", placeholder = "Cassie",value = "", id = "Name")  
+                    br
+
+                    button Submit
+
+                    
+        script(src = "/client.js") 
+        //- div#boxlikes
+        //-     p Reviews: 
+        //-     each line in user.likes
+        //-         p #{line.title}: #{line.likeTitle}
+
+//-         _id
+//- 6393cb5c64c54dc87b381137
+//- name
+//- "Air meets Water"
+//- artist
+//- "Corrine Hunt"
+//- year
+//- "2017"
+//- category
+//- "sculpture"
+//- medium
+//- "wood"
+//- description
+//- "Base of a cedar wood plank, carved with additional inlaid composite cr…"
+//- image
+//- "https://media.britishmuseum.org/media/Repository/Documents/2017_12/15_…"
+
+//- review
+//- Array
+
+//- likes
+//- Array
+
+             
+
+            
+           
+
+        
+
+
+

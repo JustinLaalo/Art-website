@@ -1,0 +1,94 @@
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTN8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+}
+
+.logout{
+    position: absolute;
+    top: 0px;
+    left: 95%;
+}
+
+
+#boxreviews{
+    background-color: aliceblue;
+    width: 200px;
+    height: 100%;
+
+    border-radius: 40px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 1250px;
+    margin-top: 100px;
+
+   
+  }
+  
+  /* Caption text */
+  .text {
+    color: black;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 500px;
+    height: 50px;
+    flex: 50%;
+    flex-direction: column; 
+    margin-top: 30px;
+    
+  }
+
+ 
+ .header{
+  position: absolute;
+  top: 0;
+ 
+  width: 100%;
+  background-color: black;
+  padding: 20px 5px;
+  overflow:hidden;
+ }
+
+ .header a{
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+ }
+
+ .header a:hover{
+    background-color: grey;
+    color: black;
+ }
+
+ .header a.active{
+    background-color: greenyellow;
+    color: white;
+ }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+.column {
+    float:left;
+
+}
+.left{
+    width: 20%;
+}
+.middle{
+    width: 40%;
+
+}
+.right{
+    width: 75%;
+}
+#down{
+    margin-top: 100px;
+}

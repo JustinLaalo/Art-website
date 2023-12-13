@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Document  
+        style 
+            include ../artistCss.css 
+
+        div#head(class="header")
+            a(href="/profilePage") Home 
+            |
+            |
+            a(href="/logined_in_user_page") Feed
+            |
+            |
+            a(href="/",class = "logout") logout
+
+    body
+        div#whiteBox(class="main")
+            div#artWork
+                p ArtWorks:
+                each artWork in art  
+                    - let name = artWork.name   
+                    a(href=`/specific/${name}`) #{name}
+            div#workShops
+                p WorkShops:
+                each work in user.WorkShop 
+                    p #{work.title}/#{work.date}
+                    br
+                    //enroll link to notifications
+             
+                
+            div#follow
+                form(method = "GET", action = `/follow/${art[0].artist}`)      
+                    button Follow/Unfollow
+
+        //- all art workart
+            
+        //- //all workshops
+
+        //- //like button
+
+        //- //follow button
+            
+
+        script(src = "/client.js") 
+
+
+             
+
+            
+           
+
+        
+
+
+

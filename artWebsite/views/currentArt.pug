@@ -1,0 +1,61 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Document  
+        style 
+            include ../currentImage.css 
+
+        div(class="header")
+            a(href="/profilePage") Home 
+            |
+            |
+            a(href="/logined_in_user_page") Feed
+            |
+            |
+            a(href="/",class = "logout") logout
+
+    body
+        div(class="main")
+            
+            div#review
+                - artName = art.name
+                form(method = "GET", action = "/addReview/"+artName)
+
+                    p Add review here:
+                        input(type="text", name="review", placeholder = "review")
+
+                    button#submit Submit review
+            img(src = art.image)  
+            div#justinIsCool
+                p(class = "name text") name: #{art.name}
+                -name = art.artist
+                form(method = "GET", action = "/artist")                
+                    a(href=`/artist/${name}`,class = "artist text") artist: #{art.artist}
+                p(class = "year text") year: #{art.year}
+                p(class = "category text") category: #{art.category}
+                p(class = "medium text") medium: #{art.medium}
+                p(class = "description text") description: #{art.description} 
+               
+            div#box
+                p Reviews:
+                each line in art.review
+                    p #{line.review}
+            div#likes            
+                form(method = "GET", action = `/like/${art.name}`)      
+                        button Like/Unlike
+        
+           
+            script(src = "/client.js") 
+
+
+
+             
+
+            
+           
+
+        
+
+
+

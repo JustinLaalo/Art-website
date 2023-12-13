@@ -1,0 +1,137 @@
+
+body{
+
+    background-image: url("https://blogs.uoregon.edu/rreidaad250/files/2014/05/art-auction-10e3hqz.jpg");
+  
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:darkseagreen;
+    color: gray;
+
+}
+
+
+button{
+    margin-left: 10%;
+
+    background-color: grey;
+    color: white;
+
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    height: 40px;
+    width: 160px;
+
+    border-radius: 25px;
+    border-color: aliceblue;
+}
+
+button:active{
+    background-color:rgb(159, 174, 188);
+}
+
+#login{
+    margin-left: 10%;
+    font-size: 10px;
+    padding-left: 100px;
+}
+
+p{
+    margin-left: 10%;
+    font-size: 15px;
+}
+
+input{
+    margin-left: 10%;
+}
+
+a{
+    margin-left: 10%;
+    color:rgb(112, 137, 68);
+}
+
+h1{
+    font-style:italic;
+    color: rgb(60, 60, 60);
+    margin-left: 10%;
+}
+
+#head{
+    margin-left: 750px;
+    width: 1130px;
+}
+
+div#whiteBox{
+
+
+    background-color: white;
+    margin-left: 750px;
+    height: 1200px;
+
+}
+
+#artWork{
+    position: absolute;
+    top: 200px;
+    left: 400px;
+
+    margin-left: 800px;
+}
+
+#likes{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+
+    margin-left: 650px;
+}
+
+#follow{
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    margin-top: 60px;
+    margin-left: 635px;
+    
+}
+#workShops{
+    position: absolute;
+    top: 200px;
+    left: 240px;
+    margin-left: 750px;
+}
+.header{
+    position: absolute;
+    top: 0;
+   
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    padding: 20px 5px;
+    overflow:hidden;
+   }
+  
+.header a{
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+
+   }
+  
+.header a:hover{
+      background-color: grey;
+      color: black;
+   }
+  
+.header a.active{
+      background-color: greenyellow;
+      color: white;
+   }
+    
+.fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+

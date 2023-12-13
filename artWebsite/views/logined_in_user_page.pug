@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Document  
+        style 
+            include ../loginUser.css 
+
+        div(class="header")
+            a(href="/profilePage") Home 
+            |
+            |
+            a(href="") Feed
+            |
+            |
+            //- a(href="/notifactionPage") Notifications
+            a(href="/",class = "logout") logout
+
+    body#body(onload = "getMeSlides()")
+        div(class = "slideShow")
+            -counter = 1;
+            each item in art
+                div(class = "slide")
+                    img(src = item.image)  
+
+                    div#justinIsCool
+                        p(class = "number") #{counter}/#{art.length} 
+                        p(class = "name text") name: #{item.name}
+                        p(class = "artist text") artist: #{item.artist}
+                        p(class = "year text") year: #{item.year}
+                        p(class = "category text") category: #{item.category}
+                        p(class = "medium text") medium: #{item.medium}
+                        p(class = "description text") description: #{item.description} 
+                        p(class = "learnMore") Learn more or add a review 
+                        -name = item.name
+                        a(href=`/specific/`+name,class = "findMe") here
+                    -counter++; 
+            a(class = "prev" onclick="change(-1)") &#10094;
+            a(class = "next" onclick="change(1)") &#10095;
+        script(src = "/client.js") 
+
+             
+
+            
+           
+
+        
+
+
+

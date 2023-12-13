@@ -1,0 +1,144 @@
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTN8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+}
+
+.logout{
+    position: absolute;
+    top: 0px;
+    left: 95%;
+}
+img{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    border: #070707;
+    border-radius: 20%;
+}
+
+.name{
+    top: 65%;
+    left: 35%;
+  }
+.artist{
+    top: 67%;
+    left: 35%;
+  }
+.year{
+    top: 69%;
+    left: 35%;
+  }
+.category{
+    top: 71%;
+    left: 35%;
+  }
+.medium{
+    top: 73%;
+    left: 35%;
+  }
+.description{
+    top: 75%;
+    left: 35%;
+  }
+#box{
+    background-color: aliceblue;
+    width: 200px;
+    padding-left: 20px;
+    margin-top: 2px;
+    margin-left: 700px;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: black;
+    
+   
+  }
+#review{
+    margin-top: 400px;
+    margin-left: 120px;
+  }
+  /* Caption text */
+.text {
+    color: black;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 500px;
+    height: 50px;
+    flex: 50%;
+    flex-direction: column; 
+    margin-top: 30px;
+    
+  }
+#likes{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    margin-top: 425px;
+    margin-left: 1050px;
+}
+#justinIsCool{
+    background-color: aliceblue;
+    width: 700px;
+    height: 250px;
+
+    border-radius: 40px;
+    border-style: solid;
+    border-color: black;
+
+    margin-left: 570px;
+    margin-top: 190px;
+    
+  }
+  
+ 
+.header{
+  position: absolute;
+  top: 0;
+ 
+  width: 100%;
+  background-color: black;
+  padding: 20px 5px;
+  overflow:hidden;
+ }
+
+.header a{
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+ }
+
+.header a:hover{
+    background-color: grey;
+    color: black;
+ }
+
+.header a.active{
+    background-color: greenyellow;
+    color: white;
+ }
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+
+  
+
+  
+/* 
+  .submit{
+    position: absolute;
+    color: green;
+    top: 50px;
+    left: 80%;
+  } */
+  
+  

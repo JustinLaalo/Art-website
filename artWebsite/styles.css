@@ -1,0 +1,69 @@
+
+body{
+
+    background-image: url("https://blogs.uoregon.edu/rreidaad250/files/2014/05/art-auction-10e3hqz.jpg");
+  
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:darkseagreen;
+    color: gray;
+
+}
+
+
+button{
+    margin-left: 10%;
+
+    background-color: grey;
+    color: white;
+
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    height: 40px;
+    width: 160px;
+
+    border-radius: 25px;
+    border-color: aliceblue;
+}
+
+button:active{
+    background-color:rgb(159, 174, 188);
+}
+
+#forgotPass{
+    margin-left: 10%;
+    font-size: 10px;
+    padding-left: 100px;
+}
+
+p{
+    margin-left: 10%;
+    font-size: 15px;
+}
+
+input{
+    margin-left: 10%;
+}
+
+a{
+    margin-left: 10%;
+    color:rgb(112, 137, 68);
+}
+
+h1{
+    font-style:italic;
+    color: rgb(60, 60, 60);
+    margin-left: 10%;
+}
+
+div{
+
+
+    background-color: white;
+    margin-left: 900px;
+    height: 1200px;
+    
+}
+
+

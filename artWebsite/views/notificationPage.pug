@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Document  
+        style 
+            
+
+        div(class="header")
+            a(href="") Home 
+            |
+            |
+            a(href="") Feed
+            |
+            |
+            a(href="") Notifications
+            |
+            |
+            a(href="/",class = "logout") logout
+
+    body#body
+        div(class = "notifications")
+            each line in notes.reverse
+                p #{line}
+
+            
+        script(src = "/client.js") 
+
+             
+
+            
+           
+
+        
+
+
+

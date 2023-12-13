@@ -1,0 +1,110 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Document  
+        style 
+            include ../profileLooker.css 
+
+        div(class="header")
+            if user.roles == "Artist" 
+                a(href="/profilePage") Home 
+                |
+                |
+                a(href="/logined_in_user_page") Feed
+                |
+                |
+                a(href = "/addWorkShop") Add WorkShop
+                |
+                |
+                a(href = "/addArt") Add Art
+                |
+                |
+                //- a(href="/notifactionPage") Notifications
+                a(href="/",class = "logout") logout
+                
+            else
+                a(href="/profilePage") Home 
+                |
+                |
+                a(href="/logined_in_user_page") Feed
+                |
+                |
+                //- a(href="/notifactionPage") Notifications
+                a(href="/",class = "logout") logout
+            
+
+    body#body
+        //reveiws
+        div.column.left
+        
+            div
+                form(method = "GET", action = "/looking")                
+                    p Name:
+                        input(type="text", name="Name", placeholder = "Name",value = "", id = "Name")
+                    br
+                    p Artist: 
+                        input(type="text", name="Artist", placeholder = "Artist",value = "", id = "Artist")
+                    br
+                    p Catagory KeyWord: 
+                        input(type="text", name="Cataword", placeholder = "Catagory KeyWord",value = "", id = "Cataword")
+                    br
+                    button#search Search
+
+            if results != null 
+                each line in results
+                    a(href=`/specific/${line.name}`) #{line.name}
+            form(method = "GET", action = "/switch")      
+                button#switch Switch 
+
+           
+
+        //all following artists
+        div.column.right
+            div#boxreviews
+                p #{user.roles}
+                p Following: 
+                each line in user.isfollowing
+                    a(href=`/artist/${line.artistName}`) #{line.artistName}
+                    br
+                p Reviews: 
+                form(method = "GET", action = `/removeReview`)                
+
+                each line in user.reveiwed
+
+                        a(href=`/removeReview/${line.reveiwTile}/${line.title}`) #{line.title}: #{line.reveiwTile} 
+                        br
+                        
+                p Likes: 
+                    form(method = "GET", action = `/removeLikes`)  
+           
+                    each line in user.madeLikes
+                            a(href=`/removeLikes/${line.artwork}`) #{line.artwork}
+
+                p Notifications: 
+                    each line in user.notifications
+                        p #{line.name} #{line.artist}
+
+
+        //switch to artist
+        
+   
+        //if statments that will display workshop
+        if user.roles == "artist"
+            form(method = "GET", action = `/workShop`)                
+
+        script(src = "/client.js") 
+        //- div#boxlikes
+        //-     p Reviews: 
+        //-     each line in user.likes
+        //-         p #{line.title}: #{line.likeTitle}
+
+             
+
+            
+           
+
+        
+
+
+

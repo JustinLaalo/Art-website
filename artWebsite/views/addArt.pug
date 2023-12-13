@@ -1,0 +1,98 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Document  
+        style 
+            include ../profileLooker.css 
+
+        div(class="header")
+            a(href="/profilePage") Home 
+            |
+            |
+            a(href="/logined_in_user_page") Feed
+            |
+            |
+            a(href = "/addWorkShop") Add WorkShop
+            |
+            |
+            a(href = "/addArt") Add Art
+            |
+            |
+            //- a(href="/notifactionPage") Notifications
+            a(href="/",class = "logout") logout
+                
+           
+
+
+    body#body
+       
+        
+        div.column.middle
+            div#down
+                form(method = "GET", action = "/addArtWork")   
+                    p Name: 
+                        input(type="text", name="Name", placeholder = "Name",value = "", id = "Name")
+                    br
+                    p Year:
+                        input(type="text", name="Year", placeholder = "2003",value = "", id = "Year")  
+                    br
+                    p Artist Name:
+                        input(type="text", name="Artist", placeholder = "Cassie",value = "", id = "Artist")  
+                    br
+                    p Category:
+                        input(type="text", name="Category", placeholder = "sculpture",value = "", id = "Category")  
+                    br
+                    p Medium:
+                        input(type="text", name="Medium", placeholder = "wood",value = "", id = "Medium")  
+                    br
+                    p Description
+                        input(type="text", name="Description", placeholder = "",value = "", id = "Description")  
+                    br
+                    p Image
+                        input(type="text", name="Image", placeholder = "url",value = "", id = "Image")  
+
+                    button Submit
+
+                    if check != null 
+                        p Already art by that name
+
+                    
+        script(src = "/client.js") 
+        //- div#boxlikes
+        //-     p Reviews: 
+        //-     each line in user.likes
+        //-         p #{line.title}: #{line.likeTitle}
+
+//-         _id
+//- 6393cb5c64c54dc87b381137
+//- name
+//- "Air meets Water"
+//- artist
+//- "Corrine Hunt"
+//- year
+//- "2017"
+//- category
+//- "sculpture"
+//- medium
+//- "wood"
+//- description
+//- "Base of a cedar wood plank, carved with additional inlaid composite cr…"
+//- image
+//- "https://media.britishmuseum.org/media/Repository/Documents/2017_12/15_…"
+
+//- review
+//- Array
+
+//- likes
+//- Array
+
+             
+
+            
+           
+
+        
+
+
+
